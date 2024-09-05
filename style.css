@@ -1,0 +1,196 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'jost', sans-serif;
+    /* box-sizing property allows us to include the padding and border 
+    in an element's total width and height */
+    box-sizing: border-box;
+}
+
+body {
+    background: #3366cc;
+    align-items: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.login-overlay {
+    background-image: url("https://ubd.edu.bn/wp-content/uploads/2022/09/about-submenu-bg-1024x512.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.8;
+}
+
+.inner h2 {
+    color: #3366cc;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+}
+
+.inner p {
+    font-size: 15px;
+    padding: 7px;
+    margin-top: 70px;
+    text-align: justify;
+    line-height: 1.4em;
+}
+
+.card {
+    width: 350px;
+    height: 430px;
+    /* perspective - defines how far the object is away from the user. 
+    So, a lower value will result in a more intensive 3D effect than 
+    a higher value. */
+    perspective: 1500px; 
+}
+
+#check {
+    display: none;
+}
+
+/* Selects every .content element that is preceded by a 
+#check:checked element */
+#check:checked ~ .content {
+    /* Binding an animation to an element, using the shorthand property */
+    animation: 2s animate;
+    /* The transform property applies a 2D or 3D transformation to an 
+    element. This property allows you to rotate, scale, move, skew, and 
+    translate elements. */
+    transform: rotateY(180deg);
+}
+
+/* The @keyframes rule specifies the animation code.
+The animation is created by gradually changing from one set of CSS styles 
+to another. During the animation, you can change the set of CSS styles 
+many times. 
+For best browser support, you should always define both the 0% and the 
+100% selectors */
+@keyframes animate {
+    0% {
+        transform: translateZ(0px);
+    }
+    50% {
+        transform: translateZ(100px);
+    }
+    100% {
+        transform: rotateY(180deg);
+    }
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    /* transform-style property specifies how nested elements are rendered 
+    in 3D space */
+    transform-style: preserve-3d;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    /* transitions allows you to change property values smoothly, over a 
+    given duration. */
+    transition: transform 1s cubic-bezier(0.75, 0, 0.85, 1);
+}
+
+.front-card, .back-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    transform-style: preserve-3d;
+    perspective: 1500px;
+    /* backface-visibility property defines whether or not the back face of 
+    an element should be visible when facing the user */
+    backface-visibility: hidden;
+}
+
+.back-card {
+    transform: rotateY(180deg);
+}
+
+.inner {
+    height: 100%;
+    padding: 1.5em;
+    transform: translateZ(80px) scale(1);
+}
+
+input[type=text], input[type=password], input[type=email] {
+    width: 95%;
+    height: 40px;
+    color: #000;
+    background: #f5f0f0;
+    border: none;
+    border-radius: 4px;
+    padding: 15px;
+    margin: 10px 8px;
+    outline: none; /* Sets an outline around an element */
+    box-sizing: border-box;
+}
+
+input[type=text]::placeholder, 
+input[type=password]::placeholder, 
+input[type=email]::placeholder {
+    color: #003399;
+    font-size: 12pt;
+}
+
+.front-card label {
+    font-size: 17px;
+    color: #003399;
+    text-decoration: underline;
+    padding: 9px 10px;
+    float: right;
+    cursor: pointer;
+}
+
+.back-card label {
+    width: 90%;
+    font-size: 16px;
+    text-align: center;
+    color: #000099;
+    text-decoration: underline;
+    position: absolute;
+    bottom: 50px;
+    cursor: pointer;
+}
+
+button {
+    width: 82%;
+    color: #eee;
+    font-size: 18px;
+    padding: 7px;
+    background: #0066cc;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.front-card button {
+    bottom: 18%;
+}
+
+.back-card button {
+    bottom: 22.5%;
+}
+
+.front-card button:hover {
+    background-color: #33cc33;
+}
+
+.back-card button:hover {
+    background-color: #cf3c27;
+}
