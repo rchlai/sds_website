@@ -1,5 +1,5 @@
-let toggleBtn = document.getElementById('toggle-btn');
 let body = document.body;
+let toggleBtn = document.getElementById('toggle-btn');
 let darkMode = localStorage.getItem('dark-mode');
 
 const enableDarkMode = () =>{
@@ -57,7 +57,7 @@ window.onscroll = () => {
    profile.classList.remove('active');
    search.classList.remove('active');
 
-   if(window.innerWidth < 1200){
+   if(window.innerWidth < 1200) {
       sideBar.classList.remove('active');
       body.classList.remove('active');
    }
