@@ -24,6 +24,7 @@
    --black: #2c3e50;
    --white: #fff;
    --border: .1rem solid rgba(0, 0 , 0, .2);
+   --swan-white: #f7f1e3;
 }
 
 html {
@@ -57,6 +58,7 @@ body.dark {
    --light-bg: #333;
    --black: #fff;
    --white: #222;
+   --swan-white: #fff;
    --border: .1rem solid rgba(255, 255, 255, .2);
 }
 
@@ -85,7 +87,8 @@ section {
 .btn,
 .delete-btn,
 .option-btn {
-   color:#fff;
+   /* color:#fff; */
+   color: var(--swan-white);
    font-size: 1.8rem;
    text-align: center;
    text-transform: capitalize;
@@ -122,7 +125,7 @@ section {
 .btn:hover,
 .delete-btn:hover,
 .option-btn:hover {
-   color: var(--white);
+   color: var(--swan-white);
    /* background-color: var(--main-color); */
    background-color: #1e3799;
 }
@@ -501,298 +504,310 @@ section {
    background-color: #1e3799;
 } */
 
-.about .row{
+.about .row {
    display: flex;
+   gap: 1.5rem;
    align-items: center;
    flex-wrap: wrap;
-   gap:1.5rem;
 }
 
-.about .row .image{
+.about .row .image {
+   /* flex property is a shorthand property for: flex-grow, flex-shrink,
+   flex-basis 
+   flex-grow property specifies how much the item will grow relative to 
+   the rest of the flexible items inside the same container.
+
+   flex-shrink property specifies how the item will shrink relative to 
+   the rest of the flexible items inside the same container.
+
+   flex-basis property specifies the initial length of a flexible item. */
    flex: 1 1 40rem;
 }
 
-.about .row .image img{
+.about .row .image img {
    width: 100%;
    height: 50rem;
 }
 
-.about .row .content{
+.about .row .content {
    flex: 1 1 40rem;
 }
 
-.about .row .content p{
-   font-size: 1.7rem;
-   line-height: 2;
+.about .row .content p {
    color: var(--light-color);
+   font-size: 1.85rem;
    padding: 1rem 0;
+   line-height: 2;
 }
 
-.about .row .content h3{
-   font-size: 3rem;
-   color:var(--black);
+.about .row .content h3 {
+   color: var(--black);
+   font-size: 4.5rem;
    text-transform: capitalize;
 }
 
-.about .box-container{
+.about .box-container {
+   gap: 1.5rem;
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
-   gap:1.5rem;
-   justify-content: center;
-   align-items: flex-start;
    margin-top: 3rem;
+   align-items: flex-start;
+   grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+   justify-content: center;
 }
 
-.about .box-container .box{
-   border-radius: .5rem;
+.about .box-container .box {
    background-color: var(--white);
    padding: 2rem;
+   border-radius: .5rem;
    display: flex;
-   align-items: center;
    gap: 2.5rem;
+   align-items: center;
 }
 
-.about .box-container .box i{
-   font-size: 4rem;
+.about .box-container .box i {
    color: var(--main-color);
+   font-size: 4.5rem;
 }
 
-.about .box-container .box h3{
-   font-size: 2.5rem;
+.about .box-container .box h3 {
    color: var(--black);
+   font-size: 3rem;
    margin-bottom: .3rem;
 }
 
-.about .box-container .box p{
+.about .box-container .box p {
+   color: var(--light-color);
    font-size: 1.7rem;
-   color:var(--light-color);
 }
 
-.reviews .box-container{
+.reviews .box-container {
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-   gap:1.5rem;
-   justify-content: center;
+   gap: 1.5rem;
    align-items: flex-start;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   justify-content: center;
 }
 
-.reviews .box-container .box{
+.reviews .box-container .box {
    border-radius: .5rem;
    background-color: var(--white);
    padding: 2rem;
 }
 
-.reviews .box-container .box p{
-   line-height: 1.7;
-   font-size: 1.7rem;
+.reviews .box-container .box p {
    color: var(--light-color);
+   font-size: 1.8rem;
+   line-height: 1.75;
 }
 
-.reviews .box-container .box .student{
+.reviews .box-container .box .student {
    margin-top: 2rem;
    display: flex;
    align-items: center;
    gap: 1.5rem;
 }
 
-.reviews .box-container .box .student img{
+.reviews .box-container .box .student img {
    height: 5rem;
    width: 5rem;
-   object-fit: cover;
    border-radius: 50%;
+   object-fit: cover;
 }
 
-.reviews .box-container .box .student h3{
-   font-size: 2rem;
+.reviews .box-container .box .student h3 {
    color: var(--black);
+   font-size: 2.2rem;
    margin-bottom: .3rem;
 }
 
-.reviews .box-container .box .student .stars{
-   font-size: 1.5rem;
-   color:var(--orange);
+.reviews .box-container .box .student .stars {
+   color: var(--orange);
+   font-size: 1.55rem;
 }
 
-.playlist-details .row{
+.playlist-details .row {
+   background-color: var(--white);
    display: flex;
    align-items: flex-end;
-   gap:3rem;
-   flex-wrap: wrap;
-   background-color: var(--white);
    padding: 2rem;
+   gap: 3rem;
+   flex-wrap: wrap;
 }
 
-.playlist-details .row .column{
+.playlist-details .row .column {
    flex: 1 1 40rem;
 }
 
-.playlist-details .row .column .save-playlist{
+.playlist-details .row .column .save-playlist {
    margin-bottom: 1.5rem;
 }
 
-.playlist-details .row .column .save-playlist button{
-   border-radius: .5rem;
-   background-color: var(--light-bg);
-   padding:1rem 1.5rem;
+.playlist-details .row .column .save-playlist button {
+   border-radius: .6rem;
+   background-color: var(--orange);
+   padding: 1rem 1.5rem;
    cursor: pointer;
 }
 
-.playlist-details .row .column .save-playlist button i{
-   font-size: 2rem;
-   color:var(--black);
-   margin-right: .8rem;
+.playlist-details .row .column .save-playlist button i {
+   color: var(--black);
+   font-size: 2.1rem;
+   margin-right: .9rem;
 }
 
-.playlist-details .row .column .save-playlist button span{
-   font-size: 1.8rem;
-   color:var(--light-color);
+.playlist-details .row .column .save-playlist button span {
+   color: var(--white);
+   font-size: 1.85rem;
 }
 
-.playlist-details .row .column .save-playlist button:hover{
+.playlist-details .row .column .save-playlist button:hover {
    background-color: var(--black);
 }
 
-.playlist-details .row .column .save-playlist button:hover i{
-   color:var(--white);
+.playlist-details .row .column .save-playlist button:hover i {
+   color: var(--white);
 }
 
-.playlist-details .row .column .save-playlist button:hover span{
-   color:var(--white);
+.playlist-details .row .column .save-playlist button:hover span {
+   color: var(--white);
 }
 
-.playlist-details .row .column .thumb{
+.playlist-details .row .column .thumb {
    position: relative;
 }
 
-.playlist-details .row .column .thumb span{
-   font-size: 1.8rem;
+.playlist-details .row .column .thumb span {
+   background-color: rgba(0, 0, 0, .3);
+   font-size: 1.85rem;
    color: #fff;
-   background-color: rgba(0,0,0,.3);
-   border-radius: .5rem;
    position: absolute;
-   top: 1rem; left: 1rem;
+   top: 1rem; 
+   left: 1rem;
    padding: .5rem 1.5rem;
+   border-radius: .5rem;
 }
 
-.playlist-details .row .column .thumb img{
+.playlist-details .row .column .thumb img {
    height: 30rem;
    width: 100%;
    object-fit: cover;
    border-radius: .5rem;
 }
 
-.playlist-details .row .column .tutor{
+.playlist-details .row .column .tutor {
    display: flex;
    align-items: center;
    gap: 2rem;
    margin-bottom: 2rem;
 }
 
-.playlist-details .row .column .tutor img{
+.playlist-details .row .column .tutor img {
    height: 7rem;
    width: 7rem;
    border-radius: 50%;
    object-fit: cover;
 }
 
-.playlist-details .row .column .tutor h3{
-   font-size: 2rem;
-   color:var(--black);
-   margin-bottom: .2rem;
-}
-
-.playlist-details .row .column .tutor span{
-   font-size: 1.5rem;
-   color: var(--light-color);
-}
-
-.playlist-details .row .column .details h3{
-   font-size: 2rem;
+.playlist-details .row .column .tutor h3 {
    color: var(--black);
+   font-size: 2.5rem;
+   margin-bottom: .3rem;
+}
+
+.playlist-details .row .column .tutor span {
+   color: var(--light-color);
+   font-size: 1.6rem;
+}
+
+.playlist-details .row .column .details h3 {
+   color: var(--black);
+   font-size: 2.5rem;
    text-transform: capitalize;
 }
 
-.playlist-details .row .column .details p{
+.playlist-details .row .column .details p {
+   color: var(--light-color);
+   font-size: 1.8rem;
    padding: 1rem 0;
    line-height: 2;
-   font-size: 1.8rem;
-   color: var(--light-color);
 }
 
-.playlist-videos .box-container{
+.playlist-videos .box-container {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-   gap:1.5rem;
+   gap: 1.5rem;
    justify-content: center;
    align-items: flex-start;
 }
 
-.playlist-videos .box-container .box{
+.playlist-videos .box-container .box {
    background-color: var(--white);
    border-radius: .5rem;
    padding: 2rem;
    position: relative;
 }
 
-.playlist-videos .box-container .box i{
-   position: absolute;
-   top: 2rem; left: 2rem; right: 2rem;
-   height: 20rem;
-   border-radius: .5rem;
-   background-color: rgba(0,0,0,.3);
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   font-size: 5rem;
-   color: #fff;
-   display: none;
-}
-
-.playlist-videos .box-container .box:hover i{
-   display: flex;
-}
-
-.playlist-videos .box-container .box img{
+.playlist-videos .box-container .box img {
    width: 100%;
    height: 20rem;
    object-fit: cover;
    border-radius: .5rem;
 }
 
-.playlist-videos .box-container .box h3{
-   margin-top: 1.5rem;
-   font-size: 1.8rem;
-   color: var(--black);
+.playlist-videos .box-container .box i {
+   position: absolute;
+   top: 2rem; 
+   left: 2rem; 
+   right: 2rem;
+   height: 20rem;
+   border-radius: .5rem;
+   background-color: rgba(0, 0, 0, .3);
+   font-size: 5rem;
+   color: #fff;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   display: none;
 }
 
-.playlist-videos .box-container .box:hover h3{
+.playlist-videos .box-container .box:hover i {
+   display: flex;
+}
+
+.playlist-videos .box-container .box h3 {
+   font-size: 1.85rem;
+   color: var(--black);
+   margin-top: 1.5rem;
+}
+
+.playlist-videos .box-container .box:hover h3 {
    color: var(--main-color);
 }
 
-.watch-video .video-container{
+.watch-video .video-container {
    background-color: var(--white);
-   border-radius: .5rem;
    padding: 2rem;
+   border-radius: .5rem;
 }
 
-.watch-video .video-container .video{
+.watch-video .video-container .video {
    position: relative;
    margin-bottom: 1.5rem;
 }
 
-.watch-video .video-container .video video{
-   border-radius: .5rem;
-   width: 100%;
-   object-fit: contain;
+.watch-video .video-container .video video {
    background-color: #000;
+   width: 100%;
+   border-radius: .5rem;
+   object-fit: contain;
 }
 
-.watch-video .video-container .title{
-   font-size: 2rem;
+.watch-video .video-container .title {
+   font-size: 2.5rem;
    color: var(--black);
 }
 
-.watch-video .video-container .info{
+.watch-video .video-container .info {
    display: flex;
    margin-top: 1.5rem;
    margin-bottom: 2rem;
@@ -802,11 +817,11 @@ section {
    align-items: center;
 }
 
-.watch-video .video-container .info p{
-   font-size: 1.6rem;
+.watch-video .video-container .info p {
+   font-size: 1.8rem;
 }
 
-.watch-video .video-container .info p span{
+.watch-video .video-container .info p span {
    color: var(--light-color);
 }
 
@@ -815,39 +830,39 @@ section {
    color: var(--main-color);
 }
 
-.watch-video .video-container .tutor{
+.watch-video .video-container .tutor {
    display: flex;
    align-items: center;
    gap: 2rem;
    margin-bottom: 1rem;
 }
 
-.watch-video .video-container .tutor img{
+.watch-video .video-container .tutor img {
+   height: 5.5rem;
+   width: 5.5rem;
    border-radius: 50%;
-   height: 5rem;
-   width: 5rem;
    object-fit: cover;
 }
 
-.watch-video .video-container .tutor h3{
-   font-size: 2rem;
+.watch-video .video-container .tutor h3 {
+   font-size: 2.5rem;
    color: var(--black);
    margin-bottom: .2rem;
 }
 
-.watch-video .video-container .tutor span{
-   font-size: 1.5rem;
+.watch-video .video-container .tutor span {
+   font-size: 1.55rem;
    color: var(--light-color);
 }
 
-.watch-video .video-container .flex{
+.watch-video .video-container .flex {
    display: flex;
    align-items: center;
-   justify-content: space-between;
    gap: 1.5rem;
+   justify-content: space-between;
 }
 
-.watch-video .video-container .flex button{
+.watch-video .video-container .flex button {
    border-radius: .5rem;
    padding: 1rem 1.5rem;
    font-size: 1.8rem;
@@ -855,61 +870,61 @@ section {
    background-color: var(--light-bg);
 }
 
-.watch-video .video-container .flex button i{
+.watch-video .video-container .flex button i {
    margin-right: 1rem;
    color: var(--black);
 }
 
-.watch-video .video-container .flex button span{
+.watch-video .video-container .flex button span {
    color: var(--light-color);
 }
 
-.watch-video .video-container .flex button:hover{
+.watch-video .video-container .flex button:hover {
    background-color: var(--black);
 }
 
-.watch-video .video-container .flex button:hover i{
+.watch-video .video-container .flex button:hover i {
    color: var(--white);
 }
 
-.watch-video .video-container .flex button:hover span{
+.watch-video .video-container .flex button:hover span {
    color: var(--white);
 }
 
-.watch-video .video-container .description{
-   line-height: 1.5;
-   font-size: 1.7rem;
+.watch-video .video-container .description {
    color: var(--light-color);
+   line-height: 1.5;
+   font-size: 1.8rem;
    margin-top: 2rem;
 }
 
-.comments .add-comment{
+.comments .add-comment {
    background-color: var(--white);
-   border-radius: .5rem;
    padding: 2rem;
    margin-bottom: 3rem;
+   border-radius: .6rem;
 }
 
-.comments .add-comment h3{
+.comments .add-comment h3 {
    font-size: 2rem;
    color: var(--black);
    margin-bottom: 1rem;
 }
 
-.comments .add-comment textarea{
+.comments .add-comment textarea {
    height: 20rem;
-   resize: none;
-   background-color: var(--light-bg);
-   border-radius: .5rem;
-   border: var(--border);
-   padding: 1.4rem;
-   font-size: 1.8rem;
-   color: var(--black);
    width: 100%;
+   background-color: var(--light-bg);
+   font-size: 1.9rem;
+   color: var(--black);
+   padding: 1.4rem;
+   resize: none;
+   border-radius: .6rem;
+   border: var(--border);
    margin: .5rem 0;
 }
 
-.comments .box-container{
+.comments .box-container {
    display: grid;
    gap: 2.5rem;
    background-color: var(--white);
@@ -917,50 +932,53 @@ section {
    border-radius: .5rem;
 }
 
-.comments .box-container .box .user{
+.comments .box-container .box .user {
    display: flex;
    align-items: center;
    gap: 1.5rem;
    margin-bottom: 2rem;
 }
 
-.comments .box-container .box .user img{
+.comments .box-container .box .user img {
    height: 5rem;
    width: 5rem;
    border-radius: 50%;
 }
 
-.comments .box-container .box .user h3{
-   font-size: 2rem;
+.comments .box-container .box .user h3 {
    color: var(--black);
+   font-size: 2rem;
    margin-bottom: .2rem;
 }
 
-.comments .box-container .box .user span{
-   font-size: 1.5rem;
+.comments .box-container .box .user span {
    color: var(--light-color);
+   font-size: 1.55rem;
 }
 
-.comments .box-container .box .comment-box{
-   border-radius: .5rem;
+.comments .box-container .box .comment-box {
+   color: var(--black);
+   position: relative;
    background-color: var(--light-bg);
-   padding:1rem 1.5rem;
+   padding: 1rem 1.5rem;
+   font-size: 1.85rem;
+   border-radius: .5rem;
    white-space: pre-line;
    margin: .5rem 0;
-   font-size: 1.8rem;
-   color: var(--black);
    line-height: 1.5;
-   position: relative;
    z-index: 0;
 }
 
-.comments .box-container .box .comment-box::before{
+.comments .box-container .box .comment-box::before {
    content: '';
    position: absolute;
-   top: -1rem; left: 1.5rem;
+   top: -1rem; 
+   left: 1.5rem;
    background-color: var(--light-bg);
    height: 1.2rem;
    width: 2rem;
+   /* clip-path property lets you clip an element to a basic shape or to 
+   an SVG source. */
    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
@@ -1401,7 +1419,7 @@ section {
       grid-template-columns: 1fr;
    }
 
-   .about .row .image img{
+   .about .row .image img {
       height: 25rem;
    }
 
