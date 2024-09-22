@@ -1,47 +1,45 @@
-let body = document.body;
-let toggleBtn = document.getElementById('toggle-btn');
+const body = document.body;
+const toggleBtn = document.getElementById('toggle-btn');
 let darkMode = localStorage.getItem('dark-mode');
+const profile = document.querySelector('.header .flex .profile');
+const search = document.querySelector('.header .flex .search-form');
+const sideBar = document.querySelector('.side-bar');
 
-const enableDarkMode = () =>{
+
+const enableDarkMode = () => {
    toggleBtn.classList.replace('fa-sun', 'fa-moon');
    body.classList.add('dark');
    localStorage.setItem('dark-mode', 'enabled');
 }
 
-const disableDarkMode = () =>{
+const disableDarkMode = () => {
    toggleBtn.classList.replace('fa-moon', 'fa-sun');
    body.classList.remove('dark');
    localStorage.setItem('dark-mode', 'disabled');
 }
 
-if(darkMode === 'enabled'){
+if(darkMode === 'enabled') {
    enableDarkMode();
 }
 
-toggleBtn.onclick = (e) =>{
+toggleBtn.onclick = (event) => {
    darkMode = localStorage.getItem('dark-mode');
-   if(darkMode === 'disabled'){
+   if(darkMode === 'disabled') {
       enableDarkMode();
-   }else{
+   } else {
       disableDarkMode();
    }
 }
-
-let profile = document.querySelector('.header .flex .profile');
 
 document.querySelector('#user-btn').onclick = () => {
    profile.classList.toggle('active');
    search.classList.remove('active');
 }
 
-let search = document.querySelector('.header .flex .search-form');
-
 document.querySelector('#search-btn').onclick = () => {
    search.classList.toggle('active');
    profile.classList.remove('active');
 }
-
-let sideBar = document.querySelector('.side-bar');
 
 document.querySelector('#menu-btn').onclick = () => {
    sideBar.classList.toggle('active');
