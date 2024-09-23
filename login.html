@@ -4,7 +4,7 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Update</title>
+      <title>Login</title>
 
       <!-- font awesome cdn link  -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
@@ -65,26 +65,18 @@
          </nav>
       </div>
 
-      <!-- update section starts -->
+      <!-- login section starts -->
       <section class="form-container">
          <form action="" method="post" enctype="multipart/form-data">
-            <h3>Update Profile</h3>
-            <p>Update name</p>
-            <input type="text" name="name" placeholder="shaikh anas" maxlength="50" class="box">
-            <p>Update email</p>
-            <input type="email" name="email" placeholder="shaikh@gmail.come" maxlength="50" class="box">
-            <p>Previous password</p>
-            <input type="password" name="old_pass" placeholder="Enter your old password" maxlength="20" class="box">
-            <p>New password</p>
-            <input type="password" name="new_pass" placeholder="Enter your old password" maxlength="20" class="box">
-            <p>Confirm password</p>
-            <input type="password" name="c_pass" placeholder="Confirm your new password" maxlength="20" class="box">
-            <p>Update picture</p>
-            <input type="file" accept="image/*" class="box">
-            <input type="submit" value="update profile" name="submit" class="btn">
+            <h3>Login Now</h3>
+            <p>Your email <span>*</span></p>
+            <input class="box" type="email" name="email" placeholder="Enter your email" required maxlength="50">
+            <p>Your password <span>*</span></p>
+            <input class="box" type="password" name="pass" placeholder="Enter your password" required maxlength="20">
+            <input class="btn" type="submit" value="login new" name="submit">
          </form>
       </section>
-      <!-- update section ends -->
+      <!-- login section ends -->
 
       <footer class="footer">
          &copy; Copyright @ 2024 by <span>UBD SDS</span>
