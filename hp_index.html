@@ -12,6 +12,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
 
+    <!-- swiper CSS link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <!-- custome CSS file link -->
     <link rel="stylesheet" href="hp_style.css" />
   </head>
@@ -28,6 +34,7 @@
           <a href="#courses">Courses</a>
           <a href="#miscellaneous">Miscellaneous</a>
           <a href="#contact">Contact</a>
+          <a class="btn" href="">To Portal</a>
         </nav>
 
         <div class="fas fa-bars" id="menu-btn"></div>
@@ -92,9 +99,75 @@
     <!-- counter section ends -->
 
     <!-- about section starts -->
+    <section class="about" id="about">
+      <div class="row">
+        <div class="image">
+          <img src="images/about.png" alt="" />
+        </div>
 
+        <div class="content">
+          <h3>Why <span>Choose Us</span>?</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+            perferendis inventore cupiditate illum, iure dignissimos nesciunt
+            rem possimus facilis. Iste sint sapiente esse laudantium atque
+            quidem recusandae. Corporis, voluptatum similique?
+          </p>
+          <a class="btn" href="#contact">Contact Us</a>
+        </div>
+      </div>
+    </section>
     <!-- about section ends -->
 
+    <!-- courses section starts -->
+    <section class="courses" id="courses">
+      <h1 class="heading">Our <span>Courses</span></h1>
+
+      <div class="swiper course-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide">
+            <img src="images/computer-science.png" alt="" />
+            <h3>Computer Science</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            <a class="btn" href="">View Modules</a>
+          </div>
+
+          <div class="swiper-slide slide">
+            <img src="images/data-science.png" alt="" />
+            <h3>Data Science</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            <a class="btn" href="">View Modules</a>
+          </div>
+
+          <div class="swiper-slide slide">
+            <img src="images/cyber-security.png" alt="" />
+            <h3>Cybersecurity and Forensics</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            <a class="btn" href="">View Modules</a>
+          </div>
+
+          <div class="swiper-slide slide">
+            <img src="images/artificial-intelligence.png" alt="" />
+            <h3>AI and Robotics</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            <a class="btn" href="">View Modules</a>
+          </div>
+
+          <div class="swiper-slide slide">
+            <img src="images/ai.png" alt="" />
+            <h3>Applied AI</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            <a class="btn" href="">View Modules</a>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!-- courses section ends -->
+
+    <!-- swiper JS link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- custom JS file link -->
     <script src="hp_script.js"></script>
   </body>
