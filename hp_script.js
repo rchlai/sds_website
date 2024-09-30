@@ -6,7 +6,7 @@ menuBtn.onclick = () => {
   navBar.classList.toggle("active");
 };
 
-var swiper = new Swiper(".course-slider", {
+var swiper = new Swiper(".item-slider", {
   spaceBetween: 20,
   grabCursor: true,
   loop: true,
